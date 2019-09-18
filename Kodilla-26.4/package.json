@@ -1,0 +1,24 @@
+{
+  "name": "czat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "ira": "npm install --save-dev npm-run-all",
+    "inst": "npm-run-all inst:* inst:dev:*",
+    "inst:react": "npm install --save react react-dom",
+    "inst:dev:babel": "npm install --save-dev @babel/core @babel/preset-env @babel/preset-react",
+    "inst:dev:webpack": "npm install --save-dev webpack html-webpack-plugin webpack-cli webpack-dev-server babel-loader style-loader css-loader react-hot-loader optimize-js-plugin",
+    "inst:ws": "npm install --save-dev socket.io socket.io-client",
+    "start": "webpack-dev-server --hot --env development",
+    "build": "webpack --env production",
+    "watch": "webpack --watch",
+    "serv": "webpack-dev-server --open"
+  },
+  "author": "BB",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^2.2.0"
+  }
+}

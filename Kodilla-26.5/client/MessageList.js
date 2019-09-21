@@ -2,18 +2,18 @@ import React from 'react';
 import styles from './MessageList.scss';
 
 const Message = props => {
-  let style = styles.Message + ' ';
+  let style = styles.message + ' ';
   let addClass = '';
   if(props.myUsername === props.from) {
-    addClass = styles.ThisUserMessage
+    addClass = styles.thisUserMessage
   }
   if (props.from === 'System') {
-    style += styles.SystemMessage;
+    style += styles.systemMessage;
   } else if (props.from === 'Server message') {
-    style += styles.ServerMessage;
+    style += styles.serverMessage;
   }
   return (
-    <div className={styles.SingleMessage+' '+ addClass}>
+    <div className={styles.singleMessage+' '+ addClass}>
       <strong>{props.from}: </strong>
       <span>{props.text}</span>
     </div>
@@ -22,8 +22,8 @@ const Message = props => {
 
 const MessageList = props => (
   
-  <div className={styles.MessageList}>
-    <div className={styles.MessageWrapper}>
+  <div className={styles.messageList}>
+    <div className={styles.messageWrapper}>
       {props.messages.map((message, i) => {
         return <Message key={i} from={message.from} text={message.text} myUsername={props.userName} />;
       })}

@@ -48,14 +48,14 @@ class App extends Component {
 
   renderLayout() {
     return (
-      <div className={styles.App}>
-        <div className={styles.AppHeader}>
-          <div className={styles.AppTitle}>ChatApp</div>
-          <div className={styles.AppRoom}>App room</div>
+      <div className={styles.app}>
+        <div className={styles.appHeader}>
+          <div className={styles.appTitle}>ChatApp</div>
+          <div className={styles.appRoom}>App room</div>
         </div>
-        <div className={styles.AppBody}>
+        <div className={styles.appBody}>
           <UsersList users={this.state.users} />
-          <div className={styles.MessageWrapper}>
+          <div className={styles.messageWrapper}>
             <MessageList messages={this.state.messages} userName={this.state.name}/>
             <MessageForm onMessageSubmit={message => this.handleMessageSubmit(message)} name={this.state.name} />
           </div>

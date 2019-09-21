@@ -1,4 +1,4 @@
-.Users {
+.users {
     display: flex;
     flex: 1;
     width: 25vw;
@@ -7,18 +7,18 @@
     border-right: 1px solid #ccc;
 }
 
-.UsersOnline {
+.usersOnline {
     padding: 20px;
     text-align: center;
     background: #ccc;
 }
 
-.UsersList {
+.usersList {
     margin: 0;
     padding: 0;
 }
 
-.UserItem {
+.userItem {
     list-style: none;
     border-bottom: 1px solid #ccc;
     padding: 20px;

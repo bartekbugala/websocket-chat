@@ -1,0 +1,40 @@
+{
+  "name": "czat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "ira": "npm install --save-dev npm-run-all",
+    "inst": "npm-run-all inst:* inst:dev:*",
+    "inst:react": "npm install --save react react-dom",
+    "inst:dev:babel": "npm install --save-dev @babel/core @babel/preset-env @babel/preset-react",
+    "inst:dev:webpack": "npm install --save-dev webpack html-webpack-plugin webpack-cli webpack-dev-server babel-loader style-loader css-loader react-hot-loader optimize-js-plugin",
+    "inst:ws": "npm install --save-dev socket.io socket.io-client",
+    "start": "webpack-dev-server --hot --env development",
+    "build": "webpack --env production",
+    "watch": "webpack --watch",
+    "serv": "webpack-dev-server --open"
+  },
+  "author": "BB",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "socket.io": "^2.2.0",
+    "socket.io-client": "^2.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "optimize-js-plugin": "0.0.4",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.40.2",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.1"
+  }
+}

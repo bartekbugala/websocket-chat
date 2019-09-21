@@ -38,7 +38,7 @@ module.exports = env => {
           }
         },
         {
-          test: /\.css$/,
+          test: /\.scss$/,
           use: [
             {
               loader: 'style-loader'
@@ -50,6 +50,9 @@ module.exports = env => {
                 sourceMap: true,
                 importLoaders: 1
               }
+            },
+            {
+              loader: 'sass-loader',
             }
           ]
         }

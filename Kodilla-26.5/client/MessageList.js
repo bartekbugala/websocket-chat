@@ -1,15 +1,17 @@
 import React from 'react';
-import styles from './MessageList.css';
+import styles from './MessageList.scss';
 
 const Message = props => {
+  let addclass;
   let style = styles.Message + ' ';
+   
   if (props.from === 'System') {
     style += styles.SystemMessage;
   } else if (props.from === 'Server message') {
     style += styles.ServerMessage;
   }
   return (
-    <div className={style}>
+    <div className={styles.SingleMessage+' '+addclass}>
       <strong>{props.from}: </strong>
       <span>{props.text}</span>
     </div>

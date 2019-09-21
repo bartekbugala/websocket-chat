@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { hot } from 'react-hot-loader';
 import io from 'socket.io-client';
 
-import styles from './App.css';
+import styles from './App.scss';
 
 import MessageForm from './MessageForm';
 import MessageList from './MessageList';
@@ -56,7 +56,7 @@ class App extends Component {
         <div className={styles.AppBody}>
           <UsersList users={this.state.users} />
           <div className={styles.MessageWrapper}>
-            <MessageList messages={this.state.messages} />
+            <MessageList messages={this.state.messages} userName={this.state.name}/>
             <MessageForm onMessageSubmit={message => this.handleMessageSubmit(message)} name={this.state.name} />
           </div>
         </div>

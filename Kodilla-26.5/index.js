@@ -31,7 +31,12 @@ io.on('connection', socket => {
   });
 
   socket.on('message', message => {
-    const { name } = usersService.getUserById(socket.id);
+    if (!usersService.getUserById(socket.id)) {
+      // przy restarcie serwera
+      return socket.emit('noUserName');
+    }
+    const { name } = usersService.getUserById(socket.id)
+   
     socket.broadcast.emit('message', {
       text: message.text,
       from: name

@@ -24,6 +24,7 @@ class App extends Component {
   componentDidMount() {
     socket.on('message', message => this.messageReceive(message));
     socket.on('update', ({ users }) => this.chatUpdate(users));
+    socket.on('noUserName', ()=>{this.refresh()})
   }
   messageReceive(message) {
     const messages = [message, ...this.state.messages];
@@ -40,6 +41,9 @@ class App extends Component {
   handleUserSubmit(name) {
     socket.emit('join', name);
     socket.on('updateName', user => this.setState({ name: user.name }));
+  }
+  refresh() {
+    window.location.reload()
   }
 
   render() {

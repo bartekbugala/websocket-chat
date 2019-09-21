@@ -41,8 +41,6 @@ class App extends Component {
   handleUserSubmit(name) {
     socket.emit('join', name);
     socket.on('updateName', user => this.setState({ name: user.name }));
-    
-
   }
 
   render() {

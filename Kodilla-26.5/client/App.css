@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    background-color: white;
 }
 
 .App {
@@ -14,20 +15,24 @@ body {
     flex-direction: row;
     align-items: center;
     border-bottom: 1px solid #ccc;
+    background-color: white;
+    color: lightblue;
 }
 
 .AppTitle {
     display: flex;
-    width: 25vw;
+    flex-basis: 25vw;
     border-right: 1px solid #ccc;
     justify-content: center;
     box-sizing: border-box;
     padding: 20px;
+    background-color: lightblue;
+    color: white;
 }
 
 .AppRoom {
     display: flex;
-    width: 75vw;
+    flex-basis: 75vw;
     justify-content: center;
     box-sizing: border-box;
     padding: 20px;
@@ -41,7 +46,8 @@ body {
 
 .MessageWrapper {
     display: flex;
+    background: white;
     flex-direction: column;
-    width: 75vw;
+    flex-basis: 75vw;
     flex: 1;
 }

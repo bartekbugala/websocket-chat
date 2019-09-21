@@ -1,6 +1,7 @@
 class UsersService {
     constructor() {
       this.users = [];
+      this.userCounter = 0; 
     }
   
     getAllUsers() {
@@ -12,6 +13,12 @@ class UsersService {
     }
   
     addUser(user) {
+    this.userCounter++;
+      
+      let usersArray = this.users.map(el => el.name);
+      if (usersArray.includes(user.name)) {
+        user.name = `${user.name} - ${this.userCounter}`;
+      } 
       this.users = [user, ...this.users];
     }
   

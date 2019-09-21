@@ -22,6 +22,9 @@ io.on('connection', (socket) => {
 			id: socket.id,
 			name
 		});
+		socket.emit('updateName', usersService.getUserById(socket.id)
+		);
+		
 		// aplikacja emituje zdarzenie update, które aktualizuje informację na temat listy użytkowników każdemu nasłuchującemu na wydarzenie 'update'
 		io.emit('update', {
 			users: usersService.getAllUsers()

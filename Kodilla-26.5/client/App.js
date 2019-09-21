@@ -19,7 +19,6 @@ class App extends Component {
       messages: [],
       text: '',
       name: '',
-      counter: 0
     };
   }
   componentDidMount() {

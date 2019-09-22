@@ -1,0 +1,11 @@
+.messageForm {
+    display: flex;
+    flex-direction: row;
+}
+
+.messageInput {
+    flex: 1;
+    padding: 20px;
+    border: 0;
+    border-top: 1px solid #ccc;
+}

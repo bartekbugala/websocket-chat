@@ -1,0 +1,26 @@
+.users {
+    display: flex;
+    flex: 1;
+    width: 25vw;
+    justify-content: flex-start;
+    flex-direction: column;
+    border-right: 1px solid #ccc;
+}
+
+.usersOnline {
+    padding: 20px;
+    text-align: center;
+    background: #ccc;
+}
+
+.usersList {
+    margin: 0;
+    padding: 0;
+}
+
+.userItem {
+    list-style: none;
+    border-bottom: 1px solid #ccc;
+    padding: 20px;
+    margin: 0 0 0 20px;
+}
